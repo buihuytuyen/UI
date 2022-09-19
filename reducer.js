@@ -7,10 +7,11 @@ export default function reducer(state = init, action, args) {
     switch (action) {
         case 'ADD':
             const [newCar] = args
-            return {
-                ...state,
+            let t = {
                 cars: [...state.cars, newCar]
             }
+            console.log(t)
+            return t
         default:
             return state
     }
